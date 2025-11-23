@@ -8,14 +8,14 @@
         </testsuite>
     </testsuites>
 
-    <filter>
-        <whitelist>
+    <coverage>
+        <include>
             <directory>src/</directory>
-            <exclude>
-                <directory>src/Resources</directory>
-            </exclude>
-        </whitelist>
-    </filter>
+        </include>
+        <exclude>
+            <directory>src/Resources</directory>
+        </exclude>
+    </coverage>
 
     <php>
         <env name="SYMFONY_DEPRECATIONS_HELPER" value="max[total]=0" />
