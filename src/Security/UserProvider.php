@@ -47,6 +47,20 @@ class UserProvider implements UserProviderInterface
         return $user;
     }
 
+    /**
+     * Loads the user for the given username.
+     *
+     * This method is deprecated in Symfony 6.0 but required for Symfony 5.4 compatibility.
+     *
+     * @param string $username The username
+     *
+     * @return SecurityUserInterface
+     */
+    public function loadUserByUsername(string $username): SecurityUserInterface
+    {
+        return $this->loadUserByIdentifier($username);
+    }
+
     public function refreshUser(SecurityUserInterface $user): SecurityUserInterface
     {
         if (!$user instanceof UserInterface) {

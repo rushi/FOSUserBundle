@@ -374,7 +374,7 @@ class UserManipulatorTest extends TestCase
      * @param string $event
      * @param bool   $once
      */
-    protected function getEventDispatcherMock($event, $once = true): MockObject&EventDispatcherInterface
+    protected function getEventDispatcherMock($event, $once = true)
     {
         $eventDispatcherMock = $this->getMockBuilder(EventDispatcherInterface::class)->getMock();
 
@@ -388,7 +388,7 @@ class UserManipulatorTest extends TestCase
     /**
      * @param bool $once
      */
-    protected function getRequestStackMock($once = true): MockObject&RequestStack
+    protected function getRequestStackMock($once = true)
     {
         $requestStackMock = $this->getMockBuilder(RequestStack::class)->getMock();
 

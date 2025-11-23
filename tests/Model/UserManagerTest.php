@@ -175,7 +175,7 @@ class UserManagerTest extends TestCase
         $this->assertSame($user, $actualUser);
     }
 
-    private function getUser(): User&MockObject
+    private function getUser()
     {
         return $this->getMockBuilder('FOS\UserBundle\Model\User')
             ->getMockForAbstractClass();
@@ -184,7 +184,7 @@ class UserManagerTest extends TestCase
     /**
      * @param array{PasswordUpdaterInterface, CanonicalFieldsUpdater} $args
      */
-    private function getUserManager(array $args): UserManager&MockObject
+    private function getUserManager(array $args)
     {
         return $this->getMockBuilder('FOS\UserBundle\Model\UserManager')
             ->setConstructorArgs($args)

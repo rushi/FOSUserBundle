@@ -12,7 +12,6 @@
 namespace FOS\UserBundle\Command;
 
 use FOS\UserBundle\Util\UserManipulator;
-use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Input\InputArgument;
@@ -25,9 +24,11 @@ use Symfony\Component\Console\Question\Question;
  *
  * @internal
  */
-#[AsCommand(name: 'fos:user:deactivate', description: 'Deactivate a user')]
 final class DeactivateUserCommand extends Command
 {
+    protected static $defaultName = 'fos:user:deactivate';
+    protected static $defaultDescription = 'Deactivate a user';
+
     private $userManipulator;
 
     public function __construct(UserManipulator $userManipulator)
