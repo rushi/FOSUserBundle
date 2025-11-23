@@ -51,7 +51,8 @@ final class CreateUserCommand extends Command
                 new InputOption('super-admin', null, InputOption::VALUE_NONE, 'Set the user as super admin'),
                 new InputOption('inactive', null, InputOption::VALUE_NONE, 'Set the user as inactive'),
             ])
-            ->setHelp(<<<'EOT'
+            ->setHelp(
+                <<<'EOT'
 The <info>fos:user:create</info> command creates a user:
 
   <info>php %command.full_name% matthieu</info>

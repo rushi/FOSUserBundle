@@ -5,6 +5,10 @@ The FOSUserBundle adds support for a database-backed user system in Symfony2+.
 It provides a flexible framework for user management that aims to handle
 common tasks such as user registration and password retrieval.
 
+**Requirements:**
+- PHP 7.4 or higher
+- Symfony 5.4
+
 Features include:
 
 - Users can be stored via Doctrine ORM or MongoDB ODM

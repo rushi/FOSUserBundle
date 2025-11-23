@@ -105,6 +105,4 @@ class UserManagerTest extends TestCase
     }
 }
 
-class DummyUser extends User
-{
-}
+class DummyUser extends User {}

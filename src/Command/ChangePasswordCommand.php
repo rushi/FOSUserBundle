@@ -43,7 +43,8 @@ final class ChangePasswordCommand extends Command
                 new InputArgument('username', InputArgument::REQUIRED, 'The username'),
                 new InputArgument('password', InputArgument::REQUIRED, 'The password'),
             ])
-            ->setHelp(<<<'EOT'
+            ->setHelp(
+                <<<'EOT'
 The <info>fos:user:change-password</info> command changes the password of a user:
 
   <info>php %command.full_name% matthieu</info>

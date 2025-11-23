@@ -32,7 +32,8 @@ final class PromoteUserCommand extends RoleCommand
         parent::configure();
 
         $this
-            ->setHelp(<<<'EOT'
+            ->setHelp(
+                <<<'EOT'
 The <info>fos:user:promote</info> command promotes a user by adding a role
 
   <info>php %command.full_name% matthieu ROLE_CUSTOM</info>
